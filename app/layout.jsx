@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body cz-shortcut-listen="true">
         <Header />
         {children}
         <Footer />

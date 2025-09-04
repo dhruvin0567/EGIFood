@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +8,93 @@
 
 :root {
   --font-poppins: "Poppins", sans-serif;
+  --font-jost :"Jost", sans-serif;
+
   --white: #ffffff;
 }
 
-/* Footer Styles */
+/* 
+=========================================================
+                       Hero CSS  
+=========================================================
+*/
+
+.bg-overlay {
+  border: 2px solid !important;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.glass-box {
+  background: rgba(30, 40, 58, 0.5);
+  backdrop-filter: blur(14px);
+  border-radius: 14px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  font-family: var(--font-poppins);
+}
+
+.hero-title {
+  margin-top: 1.25rem;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.25rem; 
+  line-height: 1.5;
+}
+
+.glass-box h1 {
+  margin-top: 1rem;
+  font-family: var(--font-jost);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.75rem); 
+  line-height: 1.2;
+}
+
+.glass-box button {
+  padding: 0.7rem clamp(10px, 2vw, 30px);
+  background: #980b15;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1vw, 1rem); 
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  display: inline-block;
+  border: 2px solid transparent;
+  transition: all 0.3s linear;
+  color: #fff;
+}
+
+.glass-box button:hover {
+  cursor: pointer;
+  background: var(--white);
+  color: #980b15;
+  border: 2px solid #980b15;
+}
+
+@media (max-width: 768px) {
+  .glass-box {
+    padding: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  .glass-box h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 
+=========================================================
+                      Footer CSS  
+=========================================================
+*/
+
 .footer {
   background-color: #333333;
   color: var(--white);
@@ -186,6 +268,6 @@
   }
 
   .footer-section {
-    text-align: center;
+    text-align: start;
   }
 }
