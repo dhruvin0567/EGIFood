@@ -1,6 +1,19 @@
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Footer = () => {
+  const informationLinks = [
+    { label: "Home", href: "/", active: true },
+    { label: "Contact Us", href: "#" },
+  ];
+
+  const accountLinks = [
+    { label: "Your Account", href: "/account" },
+    { label: "Brands", href: "/brands" },
+    { label: "Wishlist", href: "/wishlist" },
+  ];
+
+  const paymentMethods = ["PayPal", "American Express", "Visa", "MasterCard"];
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -27,43 +40,32 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Information</h3>
             <ul className="footer-links">
-              <li className="footer-link-item">
-                <MdOutlineKeyboardDoubleArrowRight className="arrow" />
-                <a href="/" className="footer-link active">
-                  Home
-                </a>
-              </li>
-              <li className="footer-link-item">
-                <MdOutlineKeyboardDoubleArrowRight className="arrow" />
-                <a href="/contact" className="footer-link">
-                  Contact Us
-                </a>
-              </li>
+              {informationLinks.map((link, index) => (
+                <li key={index} className="footer-link-item">
+                  <MdOutlineKeyboardDoubleArrowRight className="arrow" />
+                  <a
+                    href={link.href}
+                    className={`footer-link ${link.active ? "active" : ""}`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* My Account Section */}
+          {/* My Account Section (Dynamic) */}
           <div className="footer-section">
             <h3 className="footer-title">My Account</h3>
             <ul className="footer-links">
-              <li className="footer-link-item">
-                <MdOutlineKeyboardDoubleArrowRight className="arrow" />
-                <a href="/account" className="footer-link">
-                  Your Account
-                </a>
-              </li>
-              <li className="footer-link-item">
-                <MdOutlineKeyboardDoubleArrowRight className="arrow" />
-                <a href="/brands" className="footer-link">
-                  Brands
-                </a>
-              </li>
-              <li className="footer-link-item">
-                <MdOutlineKeyboardDoubleArrowRight className="arrow" />
-                <a href="/wishlist" className="footer-link">
-                  Wishlist
-                </a>
-              </li>
+              {accountLinks.map((link, index) => (
+                <li key={index} className="footer-link-item">
+                  <MdOutlineKeyboardDoubleArrowRight className="arrow" />
+                  <a href={link.href} className="footer-link">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -89,17 +91,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
+        {/* Footer Bottom with Dynamic Payments */}
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <div className="copyright">
               © EGI Food Corp 2025. All Rights Reserved.
             </div>
             <div className="payment-methods">
-              <div className="payment-method">PayPal</div>
-              <div className="payment-method">American Express</div>
-              <div className="payment-method">Visa</div>
-              <div className="payment-method">MasterCard</div>
+              {paymentMethods.map((method, index) => (
+                <div key={index} className="payment-method">
+                  {method}
+                </div>
+              ))}
             </div>
           </div>
         </div>
