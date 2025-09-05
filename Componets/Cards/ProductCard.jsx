@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useReducer } from "react";
 
 const MetaItem = ({ label, value, strong }) => (
   <>
@@ -6,6 +9,19 @@ const MetaItem = ({ label, value, strong }) => (
     <span className={strong ? "meta-strong" : "meta-value"}>{value}</span>
   </>
 );
+
+const counterReducer = (state, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return { ...state, quantity: state.quantity + 1 };
+    case "DECREMENT":
+      return { ...state, quantity: Math.max(1, state.quantity - 1) };
+    case "RESET":
+      return { ...state, quantity: 1 };
+    default:
+      return state;
+  }
+};
 
 const ProductCard = ({
   product_title,
@@ -15,10 +31,22 @@ const ProductCard = ({
   product_category,
   meta_line = [],
 }) => {
+  const [state, dispatch] = useReducer(counterReducer, { quantity: 1 });
+
+  const handleIncrement = () => {
+    dispatch({ type: "INCREMENT" });
+  };
+
+  const handleDecrement = () => {
+    dispatch({ type: "DECREMENT" });
+  };
+
   return (
     <div className="product-card">
       <div className="product-header">
-        <h3 className="product-title">{product_title}</h3>
+        <h3 className="product-title">
+          <a href="#">{product_title}</a>
+        </h3>
         <a href="#" className="product-brand">
           {product_brand}
         </a>
@@ -41,12 +69,31 @@ const ProductCard = ({
         <div className="meta-line">
           {meta_line.map((item, index) => (
             <MetaItem
-              key={index} 
+              key={index}
               label={item.label}
               value={item.value}
               strong={item.strong}
             />
           ))}
+        </div>
+        <div className="product-actions">
+          <div className="qty-control">
+            <button className="qty-btn" type="button" onClick={handleDecrement}>
+              -
+            </button>
+            <input
+              className="qty-input"
+              type="text"
+              value={state.quantity}
+              readOnly
+            />
+            <button className="qty-btn" type="button" onClick={handleIncrement}>
+              +
+            </button>
+          </div>
+          <button className="login-button" type="button">
+            Login To See Prices
+          </button>
         </div>
       </div>
     </div>
