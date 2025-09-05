@@ -412,6 +412,20 @@ p {
   overflow: auto !important;
 }
 
+/* Button Componet */
+.btn-componet {
+  background: var(--primary-red) !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+  font-family: var(--font-poppins) !important;
+  padding: 10px 25px !important;
+  transition: all 0.2s linear !important;
+}
+
+.btn-componet:hover {
+  background: var(--black) !important;
+}
+
 /* 
 =========================================================
                       Header CSS  
@@ -935,6 +949,29 @@ p {
                       JoinUs CSS  
 =========================================================
 */
+.join-us {
+  font-family: var(--font-poppins) !important;
+  padding: 60px !important;
+}
+
+.join-us p {
+  color: rgb(21, 21, 21) !important;
+  font-weight: var(--font-semibold) !important;
+  font-size: 50px !important;
+}
+
+.join-us .sub-title {
+  color: rgb(21, 21, 21) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  font-size: 30px !important;
+}
+
+#join-us-para {
+  line-height: 27px !important;
+  font-weight: var(--font-normal) !important;
+  font-size: 15px !important;
+}
 
 /* 
 =========================================================
