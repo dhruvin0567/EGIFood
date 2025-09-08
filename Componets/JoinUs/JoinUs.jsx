@@ -25,7 +25,7 @@ const JoinUs = () => {
       </p>
 
       {/* Button */}
-      <Button />
+      <Button btn_name="CONTACT US" />
     </section>
   );
 };

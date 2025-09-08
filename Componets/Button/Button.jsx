@@ -1,7 +1,9 @@
-const Button = () => {
+const Button = ({ btn_name, className = "", ...props }) => {
   return (
     <>
-      <button className="btn-componet">Contact Us</button>
+      <button className={`btn-componet ${className}`} {...props}>
+        {btn_name}
+      </button>
     </>
   );
 };
