@@ -22,11 +22,7 @@ const HandPickedCard = () => {
       product_img: "/img/Home/product8.webp",
       product_alt: "Kontos Kataifi",
       product_category: "Frozen Foods",
-      meta_line: [
-        // { label: "Pack :", value: "12" },
-        // { label: "Size :", value: "1LTR" },
-        { label: "Product # :", value: "F-228", strong: true },
-      ],
+      meta_line: [{ label: "Product # :", value: "F-228", strong: true }],
     },
     {
       id: 3,
@@ -35,11 +31,7 @@ const HandPickedCard = () => {
       product_img: "/img/Home/product9.webp",
       product_alt: "Schweppes Pomegranate",
       product_category: "Malt Beverages",
-      meta_line: [
-        // { label: "Pack :", value: "12" },
-        // { label: "Size :", value: "1LTR" },
-        { label: "Product # :", value: "BEV-080", strong: true },
-      ],
+      meta_line: [{ label: "Product # :", value: "BEV-080", strong: true }],
     },
     {
       id: 4,

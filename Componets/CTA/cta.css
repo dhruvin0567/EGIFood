@@ -1,84 +1,61 @@
-/* CTA hero exact-match styles */
 .cta {
-  position: relative;
-  width: 100%;
-  /* min-height: 680px; */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 80px;
+  position: relative !important;
+  width: 100% !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  margin-bottom: 80px !important;
 }
 
 .cta__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.55) !important;
 }
 
 .cta__content {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  min-height: 550px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  min-height: 550px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   color: #fff !important;
 }
 
 .cta__eyebrow {
   color: #fff !important;
-
-  margin-bottom: 20px;
-  max-width: 960px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  opacity: 0.95;
+  margin-bottom: 20px !important;
+  max-width: 960px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.28em !important;
+  text-transform: uppercase !important;
+  opacity: 0.95 !important;
 }
 
 .cta__title,
 .cta__subtitle {
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-  font-weight: 800;
-  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
   color: #fff !important;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .cta__title {
-  font-size: clamp(32px, 6vw, 80px);
-  margin-bottom: 4px;
+  font-size: clamp(32px, 6vw, 80px) !important;
+  margin-bottom: 4px !important;
 }
 
 .cta__subtitle {
-  font-size: clamp(32px, 6vw, 80px);
-  margin-bottom: 40px;
-}
-
-.cta__button {
-  border-radius: 6px;
-  background: #b91c1c; /* red-700 */
-  padding: 12px 28px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: #fff;
-  transition: background-color 160ms ease-in-out, box-shadow 160ms ease-in-out;
-}
-
-.cta__button:hover {
-  background: #991b1b; /* red-800 */
-}
-
-.cta__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.6);
+  font-size: clamp(32px, 6vw, 80px) !important;
+  margin-bottom: 40px !important;
 }

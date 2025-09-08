@@ -86,11 +86,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-jost);
-  font-weight: var(--font-bold);
-  line-height: 1.2;
-  color: var(--text-dark);
-  margin-bottom: var(--spacing-md);
+  font-family: var(--font-jost) !important;
+  font-weight: var(--font-bold) !important;
+  line-height: 1.2 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: var(--spacing-md) !important;
 }
 
 h1 {
@@ -240,8 +240,6 @@ p {
   }
 }
 
-/* Removed custom utility overrides to prevent conflicts with Tailwind's utilities */
-
 /* Button Componet */
 .btn-componet {
   background: var(--primary-red) !important;
@@ -375,7 +373,7 @@ p {
 }
 
 .about-measure {
-  max-width: 44rem;
+  max-width: 44rem !important;
 }
 
 .about {
@@ -509,7 +507,6 @@ p {
 
 .product-title {
   font-family: var(--font-poppins) !important;
-  /* min-height: 3rem !important; */
   font-size: 18px !important;
   font-weight: var(--font-semibold) !important;
   color: var(--text-dark) !important;
@@ -806,7 +803,7 @@ p {
 }
 
 .footer-link.active {
-  font-weight: var(--font-semibold) !important;
+  font-weight: var(-- font-semibold) !important;
   color: var(--primary-red) !important;
 }
 
@@ -841,7 +838,7 @@ p {
 }
 
 .email-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%239ca3af' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=`'http://www.w3.org/2000/svg' fill='%239ca3af' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E") !important;
 }
 
 .phone-icon {
