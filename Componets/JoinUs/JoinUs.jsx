@@ -12,7 +12,6 @@ const JoinUs = () => {
         and taste.
       </p>
 
-      {/* Description */}
       <p
         className="text-gray-600 max-w-3xl mb-10 leading-relaxed"
         id="join-us-para"

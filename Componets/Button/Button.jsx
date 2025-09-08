@@ -1,7 +1,7 @@
 const Button = () => {
   return (
     <>
-      <button className="btn btn-componet">Contact Us</button>
+      <button className="btn-componet">Contact Us</button>
     </>
   );
 };
