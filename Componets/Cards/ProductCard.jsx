@@ -76,6 +76,7 @@ const ProductCard = ({
             />
           ))}
         </div>
+
         <div className="product-actions">
           <div className="qty-control">
             <button className="qty-btn" type="button" onClick={handleDecrement}>
@@ -87,13 +88,16 @@ const ProductCard = ({
               value={state.quantity}
               readOnly
             />
+ 
             <button className="qty-btn" type="button" onClick={handleIncrement}>
               +
             </button>
           </div>
+ 
           <button className="login-button" type="button">
             Login To See Prices
           </button>
+ 
         </div>
       </div>
     </div>

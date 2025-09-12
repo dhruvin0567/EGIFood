@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body cz-shortcut-listen="true">
-        <Header />
+       <Header />
         <main>{children}</main>
         <Footer />
       </body>

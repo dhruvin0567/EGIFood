@@ -8,9 +8,9 @@ export default function Brands() {
   return (
     <section
       aria-labelledby="brands-title"
-      className="bg-[#f8f9fa] py-16 sm:py-16 lg:py-[60px]"
+      className="py-16 sm:py-16 lg:py-[60px]"
     >
-      <div className="container-max">
+      <div className="container-max" style={{ flexDirection: "column" }}>
         <h2
           id="brands-title"
           className="text-center text-3xl  tracking-normal text-[#333333] mb-10 sm:mb-10 lg:mb-[40px]"
@@ -24,8 +24,6 @@ export default function Brands() {
           className="grid gap-5 sm:gap-5 lg:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-stretch"
         >
           {logos.map((src, i) => {
-            // If 4-col grid and last row has exactly 2 items,
-            // push the first of those two to start at column 2.
             const centerTwoAtLg =
               logos.length % 4 === 2 && i === logos.length - 2;
 

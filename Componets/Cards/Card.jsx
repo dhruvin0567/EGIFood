@@ -96,7 +96,7 @@ const Card = () => {
               product_alt={product.product_alt}
               product_category={product.product_category}
               meta_line={product.meta_line}
-            />
+              />
           ))}
         </div>
       </div>

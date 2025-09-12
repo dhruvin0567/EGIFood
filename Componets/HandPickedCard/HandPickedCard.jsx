@@ -81,6 +81,7 @@ const HandPickedCard = () => {
         <div className="product-grid">
           {products.map((product) => (
             <ProductCard
+
               key={product.id}
               product_title={product.product_title}
               product_brand={product.product_brand}

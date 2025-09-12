@@ -36,7 +36,7 @@ export default function InfiniteTextSlider() {
 
         let animationFrameId;
         let offset = 0;
-        const speedPxPerFrame = 0.8; // control speed
+        const speedPxPerFrame = 0.8;
 
         const getHalfWidth = () => track.scrollWidth / 2;
         let halfWidth = getHalfWidth();
@@ -49,7 +49,7 @@ export default function InfiniteTextSlider() {
             if (!isPaused) {
                 offset += speedPxPerFrame;
                 if (offset >= halfWidth) {
-                    offset = 0; // seamless reset after one full set width
+                    offset = 0;
                 }
                 track.style.transform = `translateX(-${offset}px)`;
             }
@@ -67,17 +67,14 @@ export default function InfiniteTextSlider() {
 
     return (
         <div
-            className="w-full overflow-hidden bg-[#980b15] py-1"
+            className="slider-container"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
-            <div className="will-change-transform">
-                <div ref={trackRef} className="flex whitespace-nowrap">
+            <div className="slider-wrapper">
+                <div ref={trackRef} className="slider-track">
                     {[...items, ...items].map((item, idx) => (
-                        <div
-                            key={idx}
-                            className="px-4 text-white text-sm sm:text-base md:text-lg leading-snug cursor-pointer hover:text-yellow-400 transition-colors duration-200 ease-linear"
-                        >
+                        <div key={idx} className="slider-item">
                             {item}
                         </div>
                     ))}
